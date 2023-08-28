@@ -1,7 +1,5 @@
---// THIS VERSION IS ONLY OPTOMIZED FOR ROBLOX STUDIO USE
-
---//Yeah this is the source code dont blame me if you go blind after looking at it. Everything here is very, VERY scuffed
---// Added ID's to the instances
+--// THIS VERSION IS ONLY OPTOMIZED FOR ROBLOX STUDIO 
+--// This code is scuffed asf lmao
 
 local library = {}
 
