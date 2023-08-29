@@ -1,5 +1,4 @@
---// THIS VERSION IS ONLY OPTOMIZED FOR ROBLOX STUDIO 
---// This code is scuffed asf lmao
+--// idk why you're here this coding is shitty asf its pretty much incomprehensible
 
 local library = {}
 
@@ -195,7 +194,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 
 	--// Tweening Styles
 	if TweenInStyle == "Bottom" then
-		NotifFrame:TweenPosition(UDim2.new(0.5, 0, 0.927704811, 0), "InOut","Quart",tweenwait,false)
+		NotifFrame:TweenPosition(UDim2.new(0.5, 0, 0.928, 0), "InOut","Quart",tweenwait,false)
 	elseif TweenInStyle == "Center" then
 		NotifFrame:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "InOut","Quart",tweenwait,false)
 	elseif TweenInStyle == "CenterThenBottom" then
@@ -203,7 +202,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 		task.wait(1.6)
 		currentlytweening = false
 		if find:FindFirstChild("NotifFrame") then --// Uses FindFirstChild to avoid trying to tween a non-existent UI
-			find:FindFirstChild("NotifFrame"):TweenPosition(UDim2.new(0.5, 0, 0.927704811, 0), "InOut","Quart",tweenwait,false)
+			find:FindFirstChild("NotifFrame"):TweenPosition(UDim2.new(0.5, 0, 0.928, 0), "InOut","Quart",tweenwait,false)
 		end
 	end
 
@@ -221,8 +220,8 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 		end)
 	end
 
-	if DeleteTimeout <= 0 then 
-	elseif DeleteTimeout >= 0.01 then
+	if DeleteTimeout == false then 
+	elseif DeleteTimeout >= 0 then
 
 
 		coroutine.wrap(function()
@@ -348,33 +347,39 @@ function library:RemoveNotifications(RemoveType)
 	for i,v in next, game.Lighting:GetChildren() do
 		if v:IsA("BlurEffect") and v.Name:match("212's Notification Library | BLUR EFFECT") then 
 			if RemoveType == "Tween" then
-			coroutine.wrap(function()
-				local Info = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
-				local TweenService = game:GetService("TweenService")
-				local Aa = {Size = 0}
-				local Ab = TweenService:Create(v, Info, Aa)
+				coroutine.wrap(function()
+					local Info = TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+					local TweenService = game:GetService("TweenService")
+					local Aa = {Size = 0}
+					local Ab = TweenService:Create(v, Info, Aa)
 
-				Ab:Play()
-				task.wait(0.5)
-				v:Destroy()
+					Ab:Play()
+					task.wait(0.5)
+					v:Destroy()
 				end)()
 			elseif RemoveType == "Instant" then
 				v:Destroy()
-				end
+			end
 		end
 	end
 
 	for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
 		if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then
 			if RemoveType == "Tween" then
-			coroutine.wrap(function()
-				v.NotifFrame:TweenPosition(UDim2.new(0.5, 0, 1.2, 0), "InOut","Quart",tweenwait,false)
-				task.wait(tweenwait)
-				v:Destroy()
+				coroutine.wrap(function()
+					repeat wait(0.01) until v:WaitForChild("NotifFrame").Position == UDim2.new(0.5, 0, 0.928, 0) or v:WaitForChild("NotifFrame").Position == UDim2.new(0.5, 0, 0.5, 0)
+					--// We do another UI check since we were waiting for position, and values could have changed since last check
+					for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
+						if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then
+					v.NotifFrame:TweenPosition(UDim2.new(0.5, 0, 1.2, 0), "InOut","Quart",tweenwait,false)
+					task.wait(tweenwait)
+							v:Destroy()
+						end
+						end
 				end)()
 			elseif RemoveType == "Instant" then
 				v:Destroy()
-				end
+			end
 		end
 	end
 
@@ -392,10 +397,10 @@ function library:UpdateNotifications(HeadingText2, SubHeadingText2, Image2, R2, 
 			notiframeupdate.Heading.SubHeading.Text = SubHeadingText2
 			if notiframeupdate:FindFirstChild("ImageLabel") then
 				if Image2 == false then
-					
+
 				else
 
-					
+
 					notiframeupdate.ImageLabel.Image = Image2
 
 				end
