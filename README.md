@@ -37,3 +37,6 @@ Example: library:RemoveNotifications("Tween")
 	Image | What your image will be updated to, if the notification did not already have image enabled, then it will not add an image even if you update it with an Image ID. Leave false if you do not want to update the image (if you already previously had it enabled) | Type: String | Inputs: String, false
 
 Example: library:UpdateNotifications("update test", "updated subheading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
+
+
+[Image:Images/image.png]
