@@ -1,3 +1,3 @@
 # 212's Notification Library
 
-this repo isnt complete it only has the source rn
+Adding documentation later, example and testing gui is uploaded to the github
