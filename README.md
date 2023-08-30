@@ -5,7 +5,7 @@ Adding real documentation later, example and testing gui is uploaded to the gith
 heres a very rushed documentation
 
 
-# Create a Notification
+## Create a Notification
 
 	1 Notification at a time. If another notification is called while another one is still up, the new one will over-ride the existing one
 
@@ -25,7 +25,7 @@ heres a very rushed documentation
 Example: library:CreateNotification(5, "CenterThenBottom", "212's Notification Library", "hi :3", false, true, "Ok", 50,50,200, true, 15)
 
 
-# Remove Notifications
+## Remove Notifications
 
 	RemoveNotifications Parameters
 	
@@ -33,7 +33,7 @@ Example: library:CreateNotification(5, "CenterThenBottom", "212's Notification L
 Example: library:RemoveNotifications("Tween")
 
  
-# Update Notifications
+## Update Notifications
 
 	UpdateNotifications Parameters
 	
@@ -49,7 +49,7 @@ Example: library:UpdateNotifications("update test", "updated subheading", "rbxas
 |
 |
 
-## Images
+### Images
 
 ###### With button
 ![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/07849c20-af2e-4955-bbc2-bc9fc41454c6)
