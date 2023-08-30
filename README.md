@@ -43,7 +43,13 @@ Example: library:RemoveNotifications("Tween")
 
 Example: library:UpdateNotifications("update test", "updated subheading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
 
+|
+|
+|
+|
+|
 
+## Images
 ![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/07849c20-af2e-4955-bbc2-bc9fc41454c6)
 
 ![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/b4f601cd-81be-4c7b-b14d-0249ed68af38)
