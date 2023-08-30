@@ -5,7 +5,7 @@ Adding real documentation later, example and testing gui is uploaded to the gith
 heres a very rushed documentation
 
 
-
+# Create a Notification
 
 	1 Notification at a time. If another notification is called while another one is still up, the new one will over-ride the existing one
 
@@ -25,11 +25,15 @@ heres a very rushed documentation
 Example: library:CreateNotification(5, "CenterThenBottom", "212's Notification Library", "hi :3", false, true, "Ok", 50,50,200, true, 15)
 
 
+# Remove Notifications
+
 	RemoveNotifications Parameters
 	
 	RemoveType | The way that notifications will be removed | Type: String | Inputs: "Instant", "Tween"
 Example: library:RemoveNotifications("Tween")
-	
+
+ 
+# Update Notifications
 
 	UpdateNotifications Parameters
 	
