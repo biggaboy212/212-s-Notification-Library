@@ -33,4 +33,5 @@ library:CreateNotification(5, "CenterThenBottom", "212's Notification Library", 
 	Heading | What your heading will be updated to | Type: String | Inputs: String
 	SubHeading | what your SubHeading will be updated to | Type: String | Inputs: String
 	Image | What your image will be updated to, if the notification did not already have image enabled, then it will not add an image even if you update it with an Image ID. Leave false if you do not want to update the image (if you already previously had it enabled) | Type: String | Inputs: String, false
-	]]
+	R, G, B | RGB values for the AccentBar/TopBar | Type: Number | Inputs: Number
+        ]]
