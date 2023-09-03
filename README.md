@@ -1,7 +1,6 @@
-![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/3ff5b61c-1961-44e0-bb40-9ea14de28622)
+# Proton Utilities | 212's Notification Library
+![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/f8dbb0db-3b83-49e8-9b96-f0dec4cb6923)
 
-
-# 212's Notification Library
 
 Adding real documentation later, example and testing gui is uploaded to the github
 
