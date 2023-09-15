@@ -1,13 +1,15 @@
-# Proton Utilities | 212's Notification Library
-![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/f8dbb0db-3b83-49e8-9b96-f0dec4cb6923)
+<h1 align="center">
+  212's Notification Library
+</h1>
+
+<p align="center">
+  An open-source Notification Library designed to seamlessly integrate with the style of my ProtonV UI Framework.
+</p>
 
 
-Adding real documentation later, example and testing gui is uploaded to the github
 
-heres a very rushed documentation
-
-
-## Create a Notification
+## Documentation
+### Create a Notification
 
 	1 Notification at a time. If another notification is called while another one is still up, the new one will over-ride the existing one
 
@@ -27,7 +29,7 @@ heres a very rushed documentation
 Example: library:CreateNotification(5, "CenterThenBottom", "212's Notification Library", "hi :3", false, true, "Ok", 50,50,200, true, 15)
 
 
-## Remove Notifications
+### Remove Notifications
 
 	RemoveNotifications Parameters
 	
@@ -35,7 +37,7 @@ Example: library:CreateNotification(5, "CenterThenBottom", "212's Notification L
 Example: library:RemoveNotifications("Tween")
 
  
-## Update Notifications
+### Update Notifications
 
 	UpdateNotifications Parameters
 	
@@ -45,11 +47,7 @@ Example: library:RemoveNotifications("Tween")
 
 Example: library:UpdateNotifications("update test", "updated subheading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
 
-|
-|
-|
-|
-|
+
 
 ### Images
 
