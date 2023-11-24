@@ -43,8 +43,7 @@ Example: library:RemoveNotifications("Tween")
 	
 	Heading | What your heading will be updated to | Type: String | Inputs: String
 	SubHeading | what your SubHeading will be updated to | Type: String | Inputs: String
-	Image | What your image will be updated to, if the notification did not already have image enabled, then it will not add an image even if you update it with an Image ID. Leave false if you do not want to update the image (if you already previously had it enabled) | Type: String | Inputs: String, false
-
+	Image | If image functionality wasn't initially enabled in the notification, updating with an Image ID won't add an image. Set to false if you wish to avoid updating the image for notifications with prior image enablement.
 Example: library:UpdateNotifications("update test", "updated subheading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
 
 
