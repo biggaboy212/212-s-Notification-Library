@@ -1,5 +1,5 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/biggaboy212/212-s-Notification-Library/main/Source"))()
 
-library:CreateNotification(5, "CenterThenBottom", "212's Notification Library", "hi :3", false, false, "Ok", 50,50,200, true, 15)
+library:CreateNotification(5, "CenterThenBottom", "Header", "Subheader", false, false, "Ok", 50,50,200, true, 15)
 
 --// Documentation: https://github.com/biggaboy212/212-s-Notification-Library/blob/main/README.md
