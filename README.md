@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  An open-source Notification Library designed to seamlessly integrate with the style of my ProtonV UI Framework.
+  An open-source Notification Library.
 </p>
 
 
