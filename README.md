@@ -8,7 +8,7 @@
 
 
 
-## Documentation
+# Documentation
 ### Create a Notification
 
 	1 Notification at a time. If one notification is called while another is still up, the new one will override the existing notification
