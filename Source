@@ -17,13 +17,13 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 
 	--// Removes previous Notification elements if they exist
 	for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
-		if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then
+		if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then -- might wanna change these names up a bit if trying to make your cheat really undetectable
 			v:Destroy()
 		end
 	end
 
 	for i,v in next, game.Lighting:GetChildren() do
-		if v:IsA("BlurEffect") and v.Name:match("212's Notification Library | BLUR EFFECT") then 
+		if v:IsA("BlurEffect") and v.Name:match("212's Notification Library | BLUR EFFECT") then -- might wanna change these names up a bit if trying to make your cheat really undetectable
 			v:Destroy()
 		end
 	end
