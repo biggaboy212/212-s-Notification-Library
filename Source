@@ -126,7 +126,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 		Heading.Size = UDim2.new(0, 306, 0, 24)
 		Heading.ZIndex = 999999999
 		Heading.Font = Enum.Font.GothamMedium
-		Heading.Text = "Notification"
+		Heading.Text = HeadingText
 		Heading.TextColor3 = Color3.fromRGB(67, 67, 67)
 		Heading.TextSize = 20.000
 		Heading.TextXAlignment = Enum.TextXAlignment.Left
@@ -140,7 +140,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 		SubHeading.Size = UDim2.new(0, 302, 0, 24)
 		SubHeading.ZIndex = 999999999
 		SubHeading.Font = Enum.Font.GothamMedium
-		SubHeading.Text = "SubHeading"
+		SubHeading.Text = SubHeadingText
 		SubHeading.TextColor3 = Color3.fromRGB(125, 125, 125)
 		SubHeading.TextSize = 15.000
 		SubHeading.TextWrapped = true
