@@ -26,7 +26,7 @@
 	R, G, B | RGB values for the AccentBar/TopBar | Type: Number | Inputs: Number
 	BlurValue | Decide if you want the screen to blur when a Notification pops up | Type: Bool | Inputs: Bool
 	BlurSize | The amount that your screen will blur if blur is enabled (Default - 15) | Type: Number | Inputs: Number
-Example: library:CreateNotification(5, "CenterThenBottom", "212's Notification Library", "hi :3", false, true, "Ok", 50,50,200, true, 15)
+Example: library:CreateNotification(5, "CenterThenBottom", "Header", "SubHeader", false, true, "Ok", 50,50,200, true, 15)
 
 
 ### Remove Notifications
@@ -44,7 +44,7 @@ Example: library:RemoveNotifications("Tween")
 	Heading | What your heading will be updated to | Type: String | Inputs: String
 	SubHeading | what your SubHeading will be updated to | Type: String | Inputs: String
 	Image | If image functionality wasn't initially enabled in the notification, updating with an Image ID won't add an image. Set to false if you wish to avoid updating the image for notifications with prior image enablement.
-Example: library:UpdateNotifications("update test", "updated subheading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
+Example: library:UpdateNotifications("Updated Header", "Updated SubHeading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
 
 
 
