@@ -28,22 +28,6 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 		end
 	end
 
-function preload()
-	local ContentProvider = game:GetService("ContentProvider")
-	
-	local function checkFailed(contentId, Status)
-		if Status == Enum.AssetFetchStatus.Failure then
-			print("Asset unreachable", contentId)
-		end
-	end
-	
-	ContentProvider:PreloadAsync(Image, checkFailed)
-end
-
-if Image then
-preload()
-end
-
 	--// Create UI Instances
 	local Notif = Instance.new("ScreenGui")
 	local NotifFrame = Instance.new("Frame")
