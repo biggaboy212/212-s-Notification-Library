@@ -44,6 +44,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 	Notif.Name = "212's Notification Library "..IDstring
 	Notif.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 	Notif.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Notif.ResetOnSpawn = false
 
 	NotifFrame.Name = "NotifFrame"
 	NotifFrame.Parent = Notif
