@@ -9,6 +9,12 @@
 
 
 # Documentation
+### Getting loadstring
+```lua
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/biggaboy212/212-s-Notification-Library/main/Source"))()
+```
+
+
 ### Create a Notification
 ```lua
 library:CreateNotification(5, "CenterThenBottom", "Header", "SubHeader", false, true, "Ok", 50,50,200, true, 15)
