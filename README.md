@@ -32,21 +32,25 @@ library:CreateNotification(5, "CenterThenBottom", "Header", "SubHeader", false, 
 
 
 ### Remove Notifications
+```lua
+library:RemoveNotifications("Tween")
+```
 
 	RemoveNotifications Parameters
 	
 	RemoveType | The way that notifications will be removed | Type: String | Inputs: "Instant", "Tween"
-Example: library:RemoveNotifications("Tween")
 
  
 ### Update Notifications
+```lua
+library:UpdateNotifications("Updated Header", "Updated SubHeading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
+```
 
 	UpdateNotifications Parameters
 	
 	Heading | What your heading will be updated to | Type: String | Inputs: String
 	SubHeading | what your SubHeading will be updated to | Type: String | Inputs: String
 	Image | If image functionality wasn't initially enabled in the notification, updating with an Image ID won't add an image. Set to false if you wish to avoid updating the image for notifications with prior image enablement.
-Example: library:UpdateNotifications("Updated Header", "Updated SubHeading", "rbxasset://textures/ui/GuiImagePlaceholder.png", 200,50,50)
 
 
 
