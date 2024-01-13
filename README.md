@@ -10,6 +10,9 @@
 
 # Documentation
 ### Create a Notification
+```lua
+library:CreateNotification(5, "CenterThenBottom", "Header", "SubHeader", false, true, "Ok", 50,50,200, true, 15)
+```
 
 	1 Notification at a time. If one notification is called while another is still up, the new one will override the existing notification
 
@@ -26,9 +29,6 @@
 	R, G, B | RGB values for the AccentBar/TopBar | Type: Number | Inputs: Number
 	BlurValue | Decide if you want the screen to blur when a Notification pops up | Type: Bool | Inputs: Bool
 	BlurSize | The amount that your screen will blur if blur is enabled (Default - 15) | Type: Number | Inputs: Number
-```lua
-Example: library:CreateNotification(5, "CenterThenBottom", "Header", "SubHeader", false, true, "Ok", 50,50,200, true, 15)
-```
 
 
 ### Remove Notifications
