@@ -7,7 +7,8 @@
 </p>
 
 Logs: Added CreateAdminNotification, No docs because im lazy (Same arguments, but it disables all gui's including coregui's while the notification is up.) 
-__
+_
+
 (!Warning! This function is new, and such is very buggy, RemoveNotifications is broken for this function, and avoid executing function multiple times before the notification is over or all of your gui's will be disabled and you will have to rejoin.)
 
 
