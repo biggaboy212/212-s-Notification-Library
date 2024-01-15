@@ -6,7 +6,7 @@
   An open-source Notification Library.
 </p>
 
-Logs: Added CreateAdminNotification, No docs because im lazy (same arguments, but it disables all gui's including coregui's while the notification is up.) { !Warning! RemoveNotifications is broken for this function }
+Logs: Added CreateAdminNotification, No docs because im lazy (same arguments, but it disables all gui's including coregui's while the notification is up. RemoveNotifications is broken for this function)
 
 
 # Documentation
