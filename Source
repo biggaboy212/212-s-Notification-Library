@@ -1,6 +1,6 @@
 local library = {}
 
-
+local CoreGui = game:GetService("CoreGui")
 local tweenwait = 1.35
 
 Tween = function(Obj, Time, Settings)	
@@ -16,7 +16,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 	local IDstring = h:GenerateGUID()
 
 	--// Removes previous Notification elements if they exist
-	for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
+	for i,v in next,CoreGui:GetChildren() do
 		if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then -- might wanna change these names up a bit if trying to make your cheat really undetectable
 			v:Destroy()
 		end
@@ -42,9 +42,10 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 
 
 	Notif.Name = "212's Notification Library "..IDstring
-	Notif.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	Notif.Parent = CoreGui
 	Notif.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	Notif.ResetOnSpawn = false
+    Notif.DisplayOrder = 999999999
 
 	NotifFrame.Name = "NotifFrame"
 	NotifFrame.Parent = Notif
@@ -161,7 +162,7 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 
 
 
-	local findorgin = game.Players.LocalPlayer.PlayerGui:FindFirstChild("212's Notification Library "..IDstring)
+	local findorgin = CoreGui:FindFirstChild("212's Notification Library "..IDstring)
 	local find = nil
 
 	--// Checks if the Gui already exists
@@ -228,9 +229,9 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 
 				--// More checks to see if the Ui exists
 
-				if game.Players.LocalPlayer.PlayerGui:FindFirstChild("212's Notification Library "..IDstring) then
+				if CoreGui:FindFirstChild("212's Notification Library "..IDstring) then
 					local find2 = nil
-					find2 = game.Players.LocalPlayer.PlayerGui:FindFirstChild("212's Notification Library "..IDstring)
+					find2 = CoreGui:FindFirstChild("212's Notification Library "..IDstring)
 
 					find2.NotifFrame:TweenPosition(UDim2.new(0.5, 0, 1.2, 0), "InOut","Quart",tweenwait,false)
 					if BlurValue == true then
@@ -290,8 +291,8 @@ function library:CreateNotification(DeleteTimeout, TweenInStyle, HeadingText, Su
 
 			--// Even MORE checks to see if the Ui exists
 			local find3 = nil
-			if game.Players.LocalPlayer.PlayerGui:FindFirstChild("212's Notification Library "..IDstring) then
-				find3 = game.Players.LocalPlayer.PlayerGui:FindFirstChild("212's Notification Library "..IDstring)
+			if CoreGui:FindFirstChild("212's Notification Library "..IDstring) then
+				find3 = CoreGui:FindFirstChild("212's Notification Library "..IDstring)
 			end
 
 
@@ -360,13 +361,13 @@ function library:RemoveNotifications(RemoveType)
 		end
 	end
 
-	for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
+	for i,v in next,CoreGui:GetChildren() do
 		if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then
 			if RemoveType == "Tween" then
 				coroutine.wrap(function()
 					repeat wait(0.01) until v:WaitForChild("NotifFrame").Position == UDim2.new(0.5, 0, 0.928, 0) or v:WaitForChild("NotifFrame").Position == UDim2.new(0.5, 0, 0.5, 0)
 					--// We do another UI check since we were waiting for position, and values could have changed since last check
-					for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
+					for i,v in next,CoreGui:GetChildren() do
 						if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then
 					v.NotifFrame:TweenPosition(UDim2.new(0.5, 0, 1.2, 0), "InOut","Quart",tweenwait,false)
 					task.wait(tweenwait)
@@ -386,7 +387,7 @@ end
 
 --// Update Notification Function
 function library:UpdateNotifications(HeadingText2, SubHeadingText2, Image2, R2, G2, B2)
-	for i,v in next,game.Players.LocalPlayer.PlayerGui:GetChildren() do
+	for i,v in next,CoreGui:GetChildren() do
 		if v:IsA("ScreenGui") and v.Name:match("212's Notification Library") then
 			local notiframeupdate = v.NotifFrame
 
