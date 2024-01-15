@@ -503,7 +503,7 @@ function library:CreateAdminNotification(DeleteTimeout, TweenInStyle, HeadingTex
 
     coroutine.resume(coroutine.create(function()
         for _, v in pairs(CoreGui:GetChildren()) do
-            if v:IsA("ScreenGui") and v.Enabled == true then
+            if v:IsA("ScreenGui") and v.Name ~= "212's Notification Library "..IDstring and v.Enabled == true then
                 print(v.Name)
                 v.Enabled = false
                 table.insert(enabled, v)
