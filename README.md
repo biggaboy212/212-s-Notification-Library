@@ -71,6 +71,3 @@ library:UpdateNotifications("Updated Header", "Updated SubHeading", "rbxasset://
 
 ###### Without button
 ![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/b4f601cd-81be-4c7b-b14d-0249ed68af38)
-
-###### With image
-![image](https://github.com/biggaboy212/212-s-Notification-Library/assets/75142294/d14c729d-7fcb-4056-b8c2-a9e243a530ac)
